@@ -33,21 +33,39 @@ src/main/java/com/example/maven/
 
 ## Build
 
+### macOS/Linux
 ```bash
 cd maven/maven
 mvn clean install -DskipTests
 ```
 
+### Windows
+```cmd
+cd maven\maven
+mvn clean install -DskipTests
+```
+
 ## Run
 
+### macOS/Linux
 ```bash
 export JAVA_HOME=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home
 java -jar target/maven-0.0.1-SNAPSHOT.jar
 ```
 
 Or use Maven:
-
 ```bash
+mvn spring-boot:run
+```
+
+### Windows
+```cmd
+set JAVA_HOME=C:\Program Files\Java\jdk-21
+java -jar target\maven-0.0.1-SNAPSHOT.jar
+```
+
+Or use Maven:
+```cmd
 mvn spring-boot:run
 ```
 

@@ -33,19 +33,21 @@ src/main/java/com/example/gradle/
 
 ## Build
 
+### macOS/Linux
 ```bash
 cd gradle
 ./gradlew clean build -x test
 ```
 
-Or on Windows:
-```bash
+### Windows
+```cmd
 cd gradle
 gradlew.bat clean build -x test
 ```
 
 ## Run
 
+### macOS/Linux
 ```bash
 ./gradlew bootRun
 ```
@@ -53,6 +55,16 @@ gradlew.bat clean build -x test
 Or run the JAR directly:
 ```bash
 java -jar build/libs/gradle-0.0.1-SNAPSHOT.jar
+```
+
+### Windows
+```cmd
+gradlew.bat bootRun
+```
+
+Or run the JAR directly:
+```cmd
+java -jar build\libs\gradle-0.0.1-SNAPSHOT.jar
 ```
 
 ## Access the Application
