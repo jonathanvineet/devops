@@ -121,8 +121,7 @@ Add your server group and hosts:
 
 ```ini
 [servers]
-192.168.1.219
-192.168.1.218
+localhost ansible_connection = local
 ```
 
 ## Step 8: Connect via Ansible
