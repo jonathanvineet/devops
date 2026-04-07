@@ -27,3 +27,13 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+// Custom task to create JAR
+task createjar {
+	dependsOn bootJar
+	doLast {
+		println "JAR file created: build/libs/gradle-${version}.jar"
+		println "File size: " + file("build/libs/gradle-${version}.jar").size() + " bytes"
+	}
+}
+
