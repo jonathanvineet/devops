@@ -231,7 +231,7 @@ Create a playbook to install Node.js and npm:
 
 ```bash
 # Run on all servers in inventory
-ansible-playbook -i inventory playbook.yml
+ansible-playbook -i inventory playbook.yml --ask-become-pass
 
 # Run on specific host group
 ansible-playbook -i inventory playbook.yml -l servers
