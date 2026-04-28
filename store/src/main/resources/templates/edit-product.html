@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Edit Product</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        form { width: 400px; }
+        input { display: block; margin: 10px 0; padding: 8px; width: 100%; }
+        button { padding: 10px 20px; background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #45a049; }
+        a { color: #0066cc; }
+    </style>
+</head>
+<body>
+<h1>Edit Product</h1>
+<form th:action="@{/update/{id}(id=${product.id})}" method="post">
+    <label>Product Name: 
+        <input type="text" name="name" th:value="${product.name}" required/>
+    </label>
+    <label>Price: 
+        <input type="number" name="price" th:value="${product.price}" step="0.01" required/>
+    </label>
+    <label>Quantity: 
+        <input type="number" name="quantity" th:value="${product.quantity}" required/>
+    </label>
+    <button type="submit">Update Product</button>
+</form>
+<p><a th:href="@{/products}">Back to Products</a></p>
+</body>
+</html>
